@@ -1,6 +1,7 @@
 package authentication.authentication.security;
 
 import authentication.authentication.modules.user.entities.User;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,14 +13,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@EnableWebSecurity
-@EnableMethodSecurity
 public class UserPrincipal implements UserDetails {
 
     private String username;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
-
 
     public UserPrincipal(User user){
         this.username = user.getUsername();

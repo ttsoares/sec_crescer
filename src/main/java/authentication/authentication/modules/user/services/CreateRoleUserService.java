@@ -1,26 +1,22 @@
 package authentication.authentication.modules.user.services;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-
 import authentication.authentication.modules.user.UserRepository;
 import authentication.authentication.modules.user.dto.CreateUserRoleDTO;
 import authentication.authentication.modules.user.entities.Role;
 import authentication.authentication.modules.user.entities.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CreateRoleUserService {
 
   @Autowired
   UserRepository userRepository;
-
-
 
   public User execute(CreateUserRoleDTO createUserRoleDTO) {
 

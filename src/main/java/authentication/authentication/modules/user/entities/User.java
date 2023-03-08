@@ -33,15 +33,6 @@ public class User {
 
   private String password;
 
-  private String telefone;
-
-  private String email;
-
-  private LocalDate criadoEm;
-
-  private LocalDate alteradoEm;
-
-  private String fotoUrl;
 
   @ManyToMany
   private List<Role> roles;
